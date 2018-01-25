@@ -42,6 +42,11 @@
         <table schema="mybatis_test" tableName="ent_info" domainObjectName="Ent">
             <property name="useActualColumnNames" value="false"/>
         </table>
-
+        <table schema="mybatis_test" tableName="author" domainObjectName="Author">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table schema="mybatis_test" tableName="blog" domainObjectName="Blog">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
     </context>
 </generatorConfiguration>

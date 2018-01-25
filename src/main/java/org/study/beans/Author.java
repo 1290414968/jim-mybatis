@@ -1,11 +1,9 @@
 package org.study.beans;
 
-public class User {
+public class Author {
     private Long id;
 
     private String name;
-
-    private String type;
 
     public Long getId() {
         return id;
@@ -23,11 +21,11 @@ public class User {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
