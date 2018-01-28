@@ -185,7 +185,29 @@
     <result column="author_id" jdbcType="BIGINT" property="authorId" />
     <association property="author" column="author_id" select="org.study.mapper.AuthorMapper.selectByPrimaryKey" />
   </resultMap>
+
   <select id="selectAssociationById" parameterType="java.lang.Long" resultMap="AssociationBaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from blog
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <resultMap id="AssociationResultMap" type="org.study.beans.Blog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="author_id" jdbcType="BIGINT" property="authorId" />
+    <association property="author" javaType="org.study.beans.Author">
+      <id column="id" jdbcType="BIGINT" property="id" />
+      <result column="name" jdbcType="VARCHAR" property="name" />
+    </association>
+  </resultMap>
+  <select id="selectAssociationByResultById" parameterType="java.lang.Long" resultMap="AssociationResultMap">
+    select *
+    from blog,author where blog.author_id=author.id
+    and blog.id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectResultTypeById" parameterType="java.lang.Long" resultType="org.study.beans.Blog">
     select
     <include refid="Base_Column_List" />
     from blog
