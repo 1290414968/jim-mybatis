@@ -28,4 +28,10 @@ public interface BlogMapper {
     int updateByPrimaryKeySelective(Blog record);
 
     int updateByPrimaryKey(Blog record);
+
+    Blog selectAssociationById(Long id);
+
+    Blog selectAssociationByResultById(Long id);
+
+    Blog selectResultTypeById(Long id);
 }
