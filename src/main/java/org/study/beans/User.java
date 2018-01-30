@@ -30,4 +30,13 @@ public class User {
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

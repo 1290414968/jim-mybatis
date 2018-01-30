@@ -7,8 +7,6 @@ public class Blog {
 
     private Long authorId;
 
-    private Author author;
-
     public Long getId() {
         return id;
     }
@@ -31,23 +29,5 @@ public class Blog {
 
     public void setAuthorId(Long authorId) {
         this.authorId = authorId;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", authorId=" + authorId +
-                ", author=" + author +
-                '}';
     }
 }

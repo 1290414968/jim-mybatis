@@ -22,7 +22,7 @@ public class BlogMapperTest {
             sqlSession = getSqlSession();
             BlogMapper blogMapper = sqlSession.getMapper(BlogMapper.class);
             Blog blog = null;
-            blog = blogMapper.selectAssociationById(1l);
+//            blog = blogMapper.selectAssociationById(1l);
 //            blog = blogMapper.selectAssociationByResultById(1L);
 //            blog = blogMapper.selectResultTypeById(1L);
             System.out.println(blog);

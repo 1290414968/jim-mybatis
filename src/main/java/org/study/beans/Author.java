@@ -20,12 +20,4 @@ public class Author {
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

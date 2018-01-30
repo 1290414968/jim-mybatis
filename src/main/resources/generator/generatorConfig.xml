@@ -4,7 +4,7 @@
         "mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="C:\Users\jimcai\.m2\repository\mysql\mysql-connector-java\5.1.8\mysql-connector-java-5.1.8.jar"/>
+    <classPathEntry location="C:\Users\caijintang\.m2\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <!--去除注释  -->
 
@@ -22,16 +22,16 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="org.study.beans" targetProject="F:\gpworkspace\jim-mybatis\src\main\java">
+        <javaModelGenerator targetPackage="org.study.beans" targetProject="G:\myworkspace\jim-mybatis\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="xml" targetProject="F:\gpworkspace\jim-mybatis\src\main\resources">
+        <sqlMapGenerator targetPackage="xml" targetProject="G:\myworkspace\jim-mybatis\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="org.study.mapper" targetProject="F:\gpworkspace\jim-mybatis\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.study.mapper" targetProject="G:\myworkspace\jim-mybatis\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
@@ -46,6 +46,9 @@
             <property name="useActualColumnNames" value="false"/>
         </table>
         <table schema="mybatis_test" tableName="blog" domainObjectName="Blog">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table schema="mybatis_test" tableName="user_test" domainObjectName="UserTest">
             <property name="useActualColumnNames" value="false"/>
         </table>
     </context>

@@ -1,10 +1,9 @@
 package org.study.mapper;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.study.beans.User;
 import org.study.beans.UserExample;
-
-import java.util.List;
 
 public interface UserMapper {
     int countByExample(UserExample example);
