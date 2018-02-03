@@ -19,6 +19,7 @@ public class CacheExecutor implements  Executor {
             return (T)object;
         }
         delegate = new SimpleExecutor();
+        localCache.put(data.getSql(),delegate);
         return delegate.query(data,param);
     }
 }

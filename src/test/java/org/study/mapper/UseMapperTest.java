@@ -35,8 +35,14 @@ public class UseMapperTest {
 //            user.setName("张三丰");
 //            user.setType("武林传说");
 //            insert(sqlSession,user);
+            long startTime = System.currentTimeMillis();
             user = get(sqlSession,7L);
-            System.out.printf(user.toString());
+            System.out.println(user.toString());
+            System.out.println(System.currentTimeMillis()-startTime);
+            startTime = System.currentTimeMillis();
+            user = get(sqlSession,7L);
+            System.out.println(user.toString());
+            System.out.println(System.currentTimeMillis()-startTime);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }finally {

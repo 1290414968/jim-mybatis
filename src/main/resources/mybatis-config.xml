@@ -24,6 +24,5 @@
         <mapper resource="xml/UserMapper.xml"/>
         <mapper resource="xml/AuthorMapper.xml"/>
         <mapper resource="xml/BlogMapper.xml"/>
-        <mapper resource="xml/UserTestMapper.xml"/>
     </mappers>
 </configuration>
