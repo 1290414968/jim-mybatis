@@ -1,9 +1,10 @@
 package org.study.mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.study.beans.User;
 import org.study.beans.UserExample;
+
+import java.util.List;
 
 public interface UserMapper {
     int countByExample(UserExample example);
@@ -27,4 +28,8 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    /**
+     * 用来测试org.apache.ibatis.binding.MapperProxy.invoke的isDefaultMethod的进入条件，接口默认方法，java 8之后的新特性的实现
+     */
+    default public void test() {};
 }

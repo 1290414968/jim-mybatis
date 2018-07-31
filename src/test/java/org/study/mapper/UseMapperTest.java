@@ -11,14 +11,15 @@ import java.io.InputStream;
 
 public class UseMapperTest {
     public  static SqlSession getSqlSession() throws FileNotFoundException {
-        InputStream configFile  = new FileInputStream("F:\\gpworkspace\\jim-mybatis" +
+        InputStream configFile  = new FileInputStream("E:\\gpworkspace\\jim-mybatis" +
                     "\\src\\main\\resources\\mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configFile);
         return sqlSessionFactory.openSession(false);
     }
     public static User get(SqlSession sqlSession, Long id) {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        return userMapper.selectByPrimaryKey(id);
+        userMapper.test();
+        return null;
     }
     public static int insert(SqlSession sqlSession,User user){
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
@@ -37,12 +38,12 @@ public class UseMapperTest {
 //            insert(sqlSession,user);
             long startTime = System.currentTimeMillis();
             user = get(sqlSession,7L);
-            System.out.println(user.toString());
-            System.out.println(System.currentTimeMillis()-startTime);
-            startTime = System.currentTimeMillis();
-            user = get(sqlSession,7L);
-            System.out.println(user.toString());
-            System.out.println(System.currentTimeMillis()-startTime);
+//            System.out.println(user.toString());
+//            System.out.println(System.currentTimeMillis()-startTime);
+//            startTime = System.currentTimeMillis();
+//            user = get(sqlSession,7L);
+//            System.out.println(user.toString());
+//            System.out.println(System.currentTimeMillis()-startTime);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }finally {
